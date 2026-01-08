@@ -1,6 +1,7 @@
 "use client";
 
 import type React from "react";
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,44 +13,33 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { login } from "@/lib/auth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { LogIn } from "lucide-react";
-import { login } from "../../api/login";
 
 export default function LoginPage() {
   const router = useRouter();
-
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    setLoading(true);
 
     try {
-      const response = await login({
-        email: formData.email,
-        senha: formData.password,
-      });
-
-      if (response.success) {
-        alert("Login com sucesso ✅");
+      const user = login(formData.email, formData.password);
+      if (user) {
         router.push("/dashboard");
         router.refresh();
       } else {
-        setError(response.message);
+        setError("Email ou senha inválidos");
       }
     } catch (err) {
-      setError("Erro interno. Tente novamente.");
-    } finally {
-      setLoading(false);
+      setError("Erro ao fazer login. Tente novamente.");
     }
   };
 
@@ -65,7 +55,6 @@ export default function LoginPage() {
             Entre com sua conta para agendar consultas
           </CardDescription>
         </CardHeader>
-
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
@@ -98,8 +87,11 @@ export default function LoginPage() {
 
             {error && <p className="text-sm text-red-500">{error}</p>}
 
-            <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? "Entrando..." : "Entrar"}
+            <Button
+              type="submit"
+              className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+            >
+              Entrar
             </Button>
           </form>
 
