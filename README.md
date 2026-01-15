@@ -1,16 +1,20 @@
 # 🐾 Clínica Veterinária – Sistema Web
 
-Projeto web desenvolvido para uma clínica veterinária, com foco em apresentar os serviços da clínica e oferecer funcionalidades de login, cadastro de usuários e agendamento de consultas.  
-A aplicação utiliza tecnologias modernas do ecossistema web, integrando frontend, banco de dados e automações.
+Sistema web moderno desenvolvido para uma clínica veterinária, com foco na apresentação institucional, autenticação de usuários e agendamento de consultas online.
+
+Projeto criado com atenção à organização do código, integração entre serviços e experiência do usuário, ideal para portfólio e evolução para um sistema real de gestão clínica.
 
 🌐 **Acesse o projeto:**  
 https://clinica-veterinaria-gamma.vercel.app/
 
 ---
 
-## 📊 Dashboard do Projeto (Visão Geral)
+## 📊 Dashboard do Projeto
 
-### 📈 Maturidade Técnica do Sistema
+Dashboard conceitual para demonstrar a maturidade técnica e complexidade das funcionalidades do sistema.
+
+### 📈 Maturidade Técnica
+
 Frontend (Next.js) ██████████ 90%
 
 Backend / Serviços ████████░░ 80%
@@ -23,63 +27,119 @@ Automação (n8n) ██████░░░░ 60%
 
 Deploy / Infraestrutura █████████░ 85%
 
-------------
+--------
 
 ### 🧩 Complexidade das Funcionalidades
 
 - Página institucional: ⭐⭐⭐☆☆  
-- Cadastro e Login: ⭐⭐⭐⭐☆  
+- Cadastro e Login de usuários: ⭐⭐⭐⭐☆  
 - Agendamento de consultas: ⭐⭐⭐⭐☆  
 - Integração Frontend + Backend: ⭐⭐⭐⭐⭐  
-- Automação de processos (n8n): ⭐⭐⭐☆☆  
-
-📌 *Dashboard conceitual criado para demonstrar organização, arquitetura e maturidade técnica do projeto.*
-
----
-
-## 📌 Sobre o Projeto
-
-Este projeto foi desenvolvido como parte do aprendizado em **Desenvolvimento de Sistemas**, com o objetivo de criar uma aplicação funcional, organizada e próxima de um cenário real de mercado.
-
-O sistema permite que usuários realizem cadastro e login, tendo seus dados armazenados em banco de dados, além de possibilitar o agendamento de consultas veterinárias por meio de formulários intuitivos.
+- Automação de processos: ⭐⭐⭐☆☆  
 
 ---
 
 ## 🚀 Funcionalidades
 
-- Página institucional da clínica veterinária  
-- Cadastro de usuários com persistência em banco de dados  
-- Login de usuários autenticados  
-- Agendamento de consultas  
-- Integração entre frontend e backend  
-- Interface responsiva e navegação simples  
+- 🏥 Página institucional da clínica veterinária  
+- 🔐 Cadastro e autenticação de usuários  
+- 🐶 Agendamento de consultas veterinárias  
+- 🗄️ Persistência de dados em banco PostgreSQL  
+- 🔄 Integração entre frontend, backend e automações  
+- 📱 Interface responsiva e navegação simples  
 
 ---
 
 ## 🔐 Autenticação e Banco de Dados
 
-O sistema de autenticação foi implementado utilizando o **Supabase**, responsável pelo gerenciamento dos usuários e armazenamento dos dados em um banco **PostgreSQL**.
+A autenticação de usuários e o armazenamento de dados são realizados através do **Supabase**, utilizando banco de dados **PostgreSQL**.
 
-O fluxo de criação e registro de usuários é automatizado por meio do **n8n**, garantindo organização e escalabilidade do processo, sem sobrecarregar a lógica do frontend.
+O fluxo de criação e registro de usuários é automatizado por meio do **n8n**, garantindo escalabilidade, organização e desacoplamento da lógica do frontend.
 
 ---
 
-## 💻 Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
-- React (Next.js)  
-- HTML  
-- CSS  
-- JavaScript  
+- ⚛️ React (Next.js)  
+- 🧱 HTML  
+- 🎨 CSS  
+- 📜 JavaScript  
 
-### Backend / Serviços
-- Supabase (autenticação e banco de dados)  
-- n8n (automação de fluxos)  
+### Backend & Serviços
+- 🗄️ Supabase (PostgreSQL + Auth)  
+- 🔄 n8n (automação de fluxos)  
 
 
 ---
 
-## 🧑‍💻 Equipe
+## 📂 Estrutura do Projeto
 
-- **Kaio Richard** – Desenvolvimento do sistema  
-- **Jean Paulo** – Desenvolvimento do sistema  
+src/
+├── components/
+
+├── pages/
+
+├── services/
+
+├── hooks/
+
+├── styles/
+
+└── utils/
+
+
+-----
+
+---
+
+## 📸 Preview
+
+- 🔧 Em desenvolvimento  
+- (prints da aplicação poderão ser adicionados futuramente)
+
+---
+
+## 🧪 Dados de Teste
+
+O projeto utiliza dados de teste para demonstração das funcionalidades de autenticação e agendamento.  
+A estrutura já está preparada para receber dados reais em um ambiente de produção.
+
+---
+
+## 🎯 Objetivo do Projeto
+
+Este projeto foi criado para:
+
+- Demonstrar habilidades em desenvolvimento web moderno  
+- Aplicar conceitos de autenticação e integração com banco de dados  
+- Trabalhar com automação de processos  
+- Simular um sistema real utilizado por uma clínica veterinária  
+- Servir como base para evolução futura (SaaS ou sistema interno)
+
+---
+
+## 🚧 Próximos Passos
+
+- Dashboard administrativo para a clínica  
+- Visualização de consultas agendadas  
+- CRUD completo de usuários e atendimentos  
+- Notificações de consultas  
+- Controle de profissionais veterinários  
+- Relatórios e histórico de atendimentos  
+
+---
+
+## 🧑‍💻 Autores
+
+**Kaio Richard**  
+Desenvolvedor de Software  
+
+**Jean Paulo**  
+Desenvolvedor de Software  
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença **MIT**.
